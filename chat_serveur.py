@@ -1,4 +1,3 @@
-cd "/home/fd/Bureau/py/impact de monntreal" && cat << 'EOF' > chat_serveur.py
 import os
 from datetime import datetime
 from flask import Flask, render_template_string, request, jsonify
@@ -21,8 +20,8 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CF Montréal - Centre des Supporters & Chat</title>
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans">
 
@@ -290,5 +289,3 @@ def send_message():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
-EOF
-git add chat_serveur.py && git commit -m "Mise a jour complete avec compte a rebours et partage media" && git push origin main
